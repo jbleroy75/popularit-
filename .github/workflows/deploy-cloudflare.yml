@@ -1,0 +1,31 @@
+name: Déploiement Cloudflare
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-cloudflare
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx -y wrangler@4 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 8c94210e52e29b4d4ed4c4f743d65431
+      - name: Vérification
+        run: |
+          for p in / /blog/ /avis/ /plateformes/; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://effacemoi.jbleroy.fr$p")
+            echo "$code $p"; [ "$code" = 200 ]
+          done

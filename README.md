@@ -9,3 +9,8 @@ Site vitrine de présentation d’un service d’accompagnement pour les demande
 - `scripts/build-blog.py` : génération des pages de blog
 
 Le service présenté sur le site n’implique aucun partenariat officiel avec les plateformes citées et ne garantit pas le retrait des contenus.
+
+## Hébergement
+
+Cloudflare Workers (static assets), Worker `effacemoi`, domaine https://effacemoi.jbleroy.fr (`wrangler.jsonc`).
+Chaque push sur `main` redéploie via `.github/workflows/deploy-cloudflare.yml` (secret `CLOUDFLARE_API_TOKEN`).

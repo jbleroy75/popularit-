@@ -2,7 +2,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 import json,re,html,math
 root=Path(__file__).resolve().parents[1]/'dist'
-origin='https://effacemoi.jbl-leroy.chatgpt.site'
+origin='https://effacemoi.jbleroy.fr'
 articles=json.loads((root.parent/'content/blog.json').read_text())
 class Plain(HTMLParser):
  def __init__(self):super().__init__();self.parts=[]

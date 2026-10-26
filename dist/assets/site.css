@@ -162,3 +162,20 @@ h1,h2{font-weight:500;letter-spacing:-.01em}
  .contact{padding:56px 0}
  .contact h2{font-size:32px}
 }
+
+/* Pages par situation */
+.page-top .lead-p+.lead-p{margin-top:-4px}
+.cases dt a{text-decoration:none}.cases dt a:hover{color:var(--accent)}
+.cases dt a:after{content:" →";color:var(--muted);font-weight:400}
+.ticks{margin:0;padding:0;list-style:none}
+.ticks li{position:relative;padding:0 0 16px 28px}
+.ticks li:before{content:"";position:absolute;left:2px;top:12px;width:12px;height:1px;background:var(--ink)}
+.ticks-no li:before{content:"✕";top:1px;width:auto;height:auto;background:none;font:13px/1.9 var(--sans);color:var(--accent)}
+.two-lists{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two-lists ul{margin:0;padding-left:18px}
+.two-lists li{margin-bottom:8px}
+.list-title{font:600 13px var(--sans);margin-bottom:12px}
+.cta-line{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.cta-line h2{margin-bottom:10px}
+.cta-line p{margin:0;color:#3d3b37}
+@media(max-width:700px){.two-lists{grid-template-columns:1fr;gap:24px}.cta-line{flex-direction:column;align-items:flex-start}}

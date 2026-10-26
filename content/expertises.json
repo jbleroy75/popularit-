@@ -1,0 +1,223 @@
+[
+  {
+    "slug": "article-diffamation",
+    "court": "Un article qui vous met en cause",
+    "titre": "Un article, un billet ou un avis qui vous met en cause",
+    "resume": "Article de presse dépassé, billet de blog inexact, avis dénigrant : actualisation, droit de réponse, retrait ou action en diffamation, et les délais à ne pas manquer.",
+    "intro": [
+      "C’est la situation la plus fréquente. Un article publié il y a plusieurs années sur une procédure qui s’est terminée par un non-lieu. Un billet de blog qui vous prête des propos que vous n’avez jamais tenus. Un avis sur votre entreprise rédigé par un ancien associé. Le texte n’a parfois rien d’illégal ; il est simplement devenu faux, ou il ne raconte qu’une partie de l’histoire.",
+      "La bonne réponse dépend de la nature du texte. Un article de presse exact mais dépassé ne se traite pas comme une accusation mensongère sur un forum, et un avis client sévère ne se traite pas comme une campagne de dénigrement menée par un concurrent."
+    ],
+    "droit": [
+      "La diffamation, c’est l’allégation d’un fait précis qui porte atteinte à l’honneur ou à la considération d’une personne ; l’injure, c’est une expression outrageante sans fait précis. Les deux relèvent de la loi du 29 juillet 1881 sur la liberté de la presse, qui s’applique aussi aux publications en ligne.",
+      "Lorsqu’une entreprise est critiquée sur ses produits ou ses services, on parle plutôt de dénigrement, qui relève de la responsabilité civile (article 1240 du Code civil) et non du droit de la presse.",
+      "Toute personne nommée ou désignée dans un service de communication en ligne dispose d’un droit de réponse, prévu par la loi pour la confiance dans l’économie numérique (LCEN). Enfin, la même loi permet de notifier un contenu manifestement illicite à son hébergeur, qui engage sa responsabilité s’il ne le retire pas promptement."
+    ],
+    "delais": [
+      "Diffamation et injure : l’action se prescrit par trois mois à compter de la première publication, y compris en ligne. Passé ce délai, la voie pénale est fermée.",
+      "Droit de réponse en ligne : la demande doit être adressée dans les trois mois suivant la mise à disposition du public.",
+      "Un article ancien reste néanmoins contestable par d’autres voies : demande d’actualisation, anonymisation, déréférencement au titre des données personnelles."
+    ],
+    "action": [
+      "Nous qualifions le texte : diffamation, injure, dénigrement, information exacte mais dépassée, ou simple critique légitime.",
+      "Nous identifions l’éditeur, le directeur de la publication et l’hébergeur, y compris derrière un pseudonyme ou un site sans mentions légales.",
+      "Selon le cas, nous demandons une actualisation ou une anonymisation à l’éditeur, nous exerçons votre droit de réponse ou nous notifions l’hébergeur.",
+      "Si le délai et les faits le justifient, l’avocat en droit de la presse engage l’action : mise en demeure, citation, référé."
+    ],
+    "eviter": [
+      "Répondre à chaud, en commentaire ou sur vos réseaux : cela relance le contenu et lui donne une visibilité qu’il n’avait plus.",
+      "Laisser passer les trois mois en espérant que le sujet retombe, alors qu’une action en diffamation aurait été possible.",
+      "Contacter directement l’auteur sans stratégie : un échange maladroit peut être publié à son tour."
+    ],
+    "faq": [
+      ["L’article est exact, mais il date de dix ans. Peut-on faire quelque chose ?", "Souvent, oui. Sans contester l’exactitude, on peut demander à l’éditeur une actualisation (mention du non-lieu, de la relaxe, de la fin de la procédure) ou une anonymisation, et demander aux moteurs de recherche de ne plus associer l’article à votre nom."],
+      ["L’auteur écrit sous pseudonyme. Est-ce bloquant ?", "Non. L’hébergeur doit conserver les données permettant d’identifier l’auteur et peut être contraint de les communiquer sur décision de justice. La notification à l’hébergeur reste possible sans connaître l’auteur."],
+      ["Un avis client négatif sur mon entreprise, c’est de la diffamation ?", "Rarement. Une critique, même sévère, relève de la liberté d’expression. En revanche, un faux avis, un avis publié par un concurrent ou un avis qui impute des faits précis et faux se traite, avec des chances réelles d’aboutir."]
+    ],
+    "guides": ["supprimer-resultat-google", "conserver-preuves-contenu-en-ligne", "suivre-demande-retrait"]
+  },
+  {
+    "slug": "dereferencement-google",
+    "court": "Un résultat Google associé à votre nom",
+    "titre": "Faire déréférencer un résultat associé à votre nom",
+    "resume": "Droit au déréférencement, critères appliqués par Google et Bing, recours auprès de la CNIL : comment faire disparaître un lien des résultats de recherche sur votre nom.",
+    "intro": [
+      "Quand un partenaire, un investisseur ou un recruteur tape votre nom, il voit d’abord la première page de résultats. Un seul lien mal placé suffit à orienter toute la suite de l’échange, même si la page elle-même est ancienne ou peu lue.",
+      "Le déréférencement ne supprime pas la page : il fait disparaître le lien des résultats lorsqu’on recherche votre nom. C’est souvent la démarche la plus rapide quand la page d’origine est hors d’atteinte, par exemple sur un site étranger qui ne répond pas."
+    ],
+    "droit": [
+      "Depuis l’arrêt Google Spain de la Cour de justice de l’Union européenne (13 mai 2014), toute personne peut demander à un moteur de recherche de ne plus associer à son nom des liens vers des informations inexactes, inadéquates, non pertinentes ou excessives. Ce droit est aujourd’hui fondé sur le RGPD, notamment ses articles 17 (droit à l’effacement) et 21 (droit d’opposition).",
+      "Le moteur met en balance votre droit à la vie privée et l’intérêt du public à accéder à l’information. Votre rôle dans la vie publique, l’ancienneté de l’information, son exactitude et sa nature (données sensibles, procédures pénales) pèsent dans la décision.",
+      "En cas de refus, vous pouvez saisir la CNIL, puis le juge. Les informations relatives à des procédures pénales bénéficient d’une protection renforcée, notamment lorsque la procédure s’est terminée en votre faveur."
+    ],
+    "delais": [
+      "Il n’y a pas de délai pour demander un déréférencement : plus l’information est ancienne, plus la demande a de chances d’aboutir.",
+      "Les moteurs répondent généralement en quelques semaines ; un recours auprès de la CNIL prend plusieurs mois.",
+      "Le déréférencement porte sur les recherches effectuées depuis l’Europe ; nous vérifions aussi les autres versions du moteur selon votre exposition."
+    ],
+    "action": [
+      "Nous faisons l’état des lieux de ce qui apparaît sur votre nom, ses variantes et les recherches associées (nom et entreprise, nom et ville).",
+      "Nous trions ce qui relève du déréférencement, ce qui doit être traité à la source et ce qu’il vaut mieux laisser en l’état.",
+      "Nous rédigeons des demandes argumentées, page par page, auprès de Google et de Bing, avec les pièces utiles.",
+      "En cas de refus, nous préparons la plainte CNIL et, si nécessaire, l’avocat en données personnelles prend le relais."
+    ],
+    "eviter": [
+      "Envoyer une demande générique avec une liste de liens sans argumentation : les refus de premier niveau sont alors fréquents et plus difficiles à contester.",
+      "Oublier les images, les suggestions de recherche et les versions en cache, qui maintiennent l’information visible.",
+      "Compter sur la seule « dilution » par des contenus positifs quand un fondement juridique existe."
+    ],
+    "faq": [
+      ["Je suis dirigeant d’une société connue. Puis-je quand même demander un déréférencement ?", "Oui, mais votre rôle public pèse dans la balance. Les informations sur votre vie privée, votre famille ou des faits anciens sans lien avec vos fonctions actuelles restent déréférençables ; celles qui concernent directement votre activité de dirigeant le sont plus difficilement."],
+      ["Le site d’origine verra-t-il la demande ?", "Le moteur peut informer l’éditeur qu’un lien a été déréférencé, sans lui communiquer votre demande. Si vous souhaitez éviter toute réaction de l’éditeur, nous en tenons compte dans la stratégie."],
+      ["Combien de temps le lien reste-t-il retiré ?", "Tant que la décision n’est pas remise en cause. Nous vérifions ensuite que le contenu ne réapparaît pas sous une autre adresse, ce qui arrive avec les sites de reprise automatique."]
+    ],
+    "guides": ["supprimer-resultat-google", "retirer-photo-personnelle-google", "supprimer-donnees-personnelles-internet"]
+  },
+  {
+    "slug": "donnees-personnelles",
+    "court": "Votre adresse ou votre téléphone en ligne",
+    "titre": "Adresse, téléphone, informations familiales : retirer ce qui est exposé",
+    "resume": "Annuaires, sites de données, registres reproduits, forums : faire effacer votre adresse, votre téléphone ou les informations sur vos proches, et empêcher leur republication.",
+    "intro": [
+      "Pour un dirigeant, l’adresse du domicile n’est pas une donnée anodine. Elle apparaît sur des annuaires, sur des sites qui reproduisent les registres d’entreprises, dans des fils de discussion, parfois accompagnée de photos de la maison, du nom des enfants ou de l’établissement qu’ils fréquentent.",
+      "Ces informations circulent par couches : un site les publie, d’autres les copient automatiquement. Les retirer d’un seul endroit ne suffit pas ; il faut traiter la source et les reprises."
+    ],
+    "droit": [
+      "Le RGPD vous permet de demander l’effacement de vos données (article 17) et de vous opposer à leur traitement (article 21). Le responsable du site doit répondre dans un délai d’un mois, prolongeable de deux mois dans les cas complexes.",
+      "Certaines informations proviennent de registres légaux d’entreprises. Elles ne peuvent pas toujours être retirées du registre lui-même, mais leur reproduction par des sites tiers, leur indexation et leur croisement avec d’autres données se contestent.",
+      "La publication d’informations permettant d’identifier ou de localiser une personne, dans le but de l’exposer à un risque, est par ailleurs une infraction pénale depuis 2021 (article 223-1-1 du Code pénal)."
+    ],
+    "delais": [
+      "Un mois pour la réponse du responsable du site, prolongeable de deux mois.",
+      "Sans réponse ou en cas de refus : plainte auprès de la CNIL, ou action en justice pour les cas urgents.",
+      "En cas de menace réelle, la plainte pénale et les mesures de protection passent avant toute démarche de retrait."
+    ],
+    "action": [
+      "Nous recensons les pages où apparaissent votre adresse, vos numéros, vos proches, vos biens, ainsi que les annuaires et sites de données qui les revendent.",
+      "Nous adressons les demandes d’effacement et d’opposition, site par site, et demandons le déréférencement des pages qui résistent.",
+      "Nous traitons les reprises automatiques et contrôlons, dans la durée, que les informations ne réapparaissent pas.",
+      "Si la publication vise à vous exposer, l’avocat pénaliste dépose plainte et peut demander des mesures urgentes."
+    ],
+    "eviter": [
+      "Signaler publiquement la publication : cela attire l’attention sur l’information que vous cherchez à faire disparaître.",
+      "Se contenter du site le plus visible : les sites de reprise réalimentent les résultats quelques semaines plus tard.",
+      "Supprimer les preuves avant d’avoir établi une capture datée, si une plainte pourrait être nécessaire."
+    ],
+    "faq": [
+      ["Mon adresse figure au registre du commerce. Peut-on la retirer ?", "Pas toujours du registre lui-même, selon votre situation. En revanche, sa reproduction sur des sites tiers et son indexation dans les moteurs de recherche se contestent, et il existe des solutions pour ne plus déclarer votre domicile personnel."],
+      ["Mes enfants sont mentionnés. Est-ce traité différemment ?", "Oui. Les données concernant des mineurs bénéficient d’une protection renforcée et ces demandes sont traitées en priorité."],
+      ["Faut-il aussi surveiller dans la durée ?", "Pour les dirigeants exposés, c’est souvent utile : les sites de données se réalimentent. Une veille permet de traiter une republication en quelques jours plutôt qu’en quelques mois."]
+    ],
+    "guides": ["supprimer-donnees-personnelles-internet", "doxxing-donnees-exposees", "supprimer-resultat-google"]
+  },
+  {
+    "slug": "usurpation-identite",
+    "court": "Un faux profil à votre nom",
+    "titre": "Faux profil, usurpation d’identité, site à votre nom",
+    "resume": "Faux compte LinkedIn, Instagram ou X, site utilisant votre nom ou celui de votre entreprise : signalement, preuves, plainte pour usurpation d’identité numérique.",
+    "intro": [
+      "Un compte LinkedIn reprend votre photo et votre parcours, puis contacte vos partenaires pour proposer un « investissement ». Un profil Instagram publie au nom de votre entreprise. Un site imite le vôtre pour collecter des paiements. L’usurpation vise rarement la personne elle-même : elle vise la confiance que les autres lui accordent.",
+      "Ces dossiers se traitent vite, parce que le préjudice grandit à chaque message envoyé, et avec méthode, parce que les plateformes exigent des éléments précis avant d’agir."
+    ],
+    "droit": [
+      "Le fait d’usurper l’identité d’un tiers ou de faire usage de données permettant de l’identifier, en vue de troubler sa tranquillité ou de porter atteinte à son honneur ou à sa considération, est puni d’un an d’emprisonnement et de 15 000 euros d’amende, y compris lorsque les faits sont commis en ligne (article 226-4-1 du Code pénal).",
+      "Les réseaux sociaux disposent de procédures dédiées à l’usurpation, distinctes des signalements ordinaires. Lorsqu’un site reproduit votre marque ou votre nom commercial, le droit des marques et les procédures auprès des bureaux d’enregistrement de noms de domaine s’ajoutent."
+    ],
+    "delais": [
+      "Les plateformes traitent généralement les usurpations documentées en quelques jours.",
+      "La plainte pénale peut être déposée dès la constatation des faits ; les preuves doivent être conservées avant toute suppression du compte.",
+      "Pour un nom de domaine, une procédure extrajudiciaire de récupération prend en général quelques semaines."
+    ],
+    "action": [
+      "Nous conservons les preuves (captures datées, adresses, messages envoyés à vos contacts) avant toute démarche.",
+      "Nous utilisons les procédures d’usurpation propres à chaque plateforme, avec les justificatifs attendus.",
+      "Nous vous aidons à prévenir les contacts visés, sans donner d’écho public à l’affaire.",
+      "L’avocat pénaliste dépose plainte, et l’avocat en propriété intellectuelle intervient lorsque la marque ou le domaine sont en jeu."
+    ],
+    "eviter": [
+      "Signaler le compte depuis plusieurs comptes amis sans preuve d’identité : les signalements de masse sont souvent ignorés.",
+      "Faire supprimer le compte avant d’avoir conservé les preuves, si une plainte est envisagée.",
+      "Publier une mise en garde générale qui fait connaître le faux compte à ceux qui ne l’avaient pas vu."
+    ],
+    "faq": [
+      ["Le faux compte n’a rien publié d’insultant. Est-ce quand même une infraction ?", "L’usurpation est constituée dès lors qu’elle vise à troubler votre tranquillité ou à nuire à votre réputation, ce qui est le cas lorsqu’elle sert à tromper vos contacts. Une escroquerie peut s’y ajouter."],
+      ["Les escrocs recréent un compte dès qu’il est supprimé. Que faire ?", "C’est fréquent. Une surveillance permet de signaler les nouveaux comptes rapidement, et la plainte permet aux enquêteurs de relier les faits entre eux."],
+      ["Mon entreprise est aussi concernée. Faut-il deux démarches ?", "Nous les menons ensemble : la marque, le nom de domaine et votre identité personnelle relèvent de procédures différentes, mais d’une même stratégie."]
+    ],
+    "guides": ["signaler-usurpation-identite", "conserver-preuves-contenu-en-ligne", "suivre-demande-retrait"]
+  },
+  {
+    "slug": "images-sans-accord",
+    "court": "Des images diffusées sans votre accord",
+    "titre": "Photos, vidéos ou montages diffusés sans votre accord",
+    "resume": "Images privées, vidéos intimes, montages générés par IA : retrait rapide, plainte, et un traitement entièrement confidentiel.",
+    "intro": [
+      "Ce sont les dossiers les plus douloureux, et ceux où la rapidité compte le plus. Une photo prise dans un cadre privé, une vidéo partagée par un ancien proche, ou un montage réaliste fabriqué par intelligence artificielle à partir de vos photos publiques.",
+      "Ces dossiers sont traités en priorité et ne sont partagés qu’avec l’avocat qui en a besoin. Vous n’avez pas à nous transmettre les images elles-mêmes : les adresses des pages suffisent pour commencer."
+    ],
+    "droit": [
+      "Chacun dispose d’un droit sur son image et au respect de sa vie privée (article 9 du Code civil). La diffusion d’une image prise dans un lieu privé sans consentement est une infraction (article 226-1 du Code pénal).",
+      "La diffusion d’images à caractère sexuel sans l’accord de la personne est punie de deux ans d’emprisonnement et de 60 000 euros d’amende, même si la personne avait consenti à la prise de vue (article 226-2-1 du Code pénal).",
+      "La loi du 21 mai 2024 visant à sécuriser et réguler l’espace numérique (SREN) a créé des infractions spécifiques pour les montages réalisés par traitement algorithmique, en particulier lorsqu’ils sont à caractère sexuel."
+    ],
+    "delais": [
+      "Les principales plateformes retirent généralement ces contenus en quelques heures à quelques jours lorsque la demande est complète.",
+      "La plainte peut être déposée à tout moment ; plus elle est rapide, plus les éléments techniques sont faciles à obtenir.",
+      "Le déréférencement des pages qui hébergent les images est mené en parallèle."
+    ],
+    "action": [
+      "Nous recensons les pages qui diffusent les images, sans vous demander de les regarder ni de nous les envoyer.",
+      "Nous utilisons les procédures prioritaires des plateformes et des moteurs de recherche, y compris les outils de prévention de la republication.",
+      "Nous identifions les hébergeurs des sites qui ne répondent pas et leur adressons des notifications formelles.",
+      "L’avocat pénaliste dépose plainte et peut demander des mesures en urgence."
+    ],
+    "eviter": [
+      "Contacter la personne qui diffuse les images ou céder à une demande d’argent : la pression augmente presque toujours ensuite.",
+      "Télécharger ou partager les images pour « montrer » le problème : cela multiplie les copies.",
+      "Attendre que cela passe : les sites de reprise se multiplient dans les premiers jours."
+    ],
+    "faq": [
+      ["J’avais consenti à la photo, pas à sa diffusion. Suis-je protégé ?", "Oui. La loi sanctionne la diffusion sans accord, même lorsque la personne avait accepté la prise de vue."],
+      ["C’est un montage, ce n’est pas vraiment moi. Peut-on agir ?", "Oui. Les montages réalisés par IA relèvent désormais d’infractions spécifiques, et les plateformes les retirent sur le même fondement que les images réelles."],
+      ["Quelqu’un me réclame de l’argent pour ne pas publier. Que faire ?", "Ne payez pas, ne répondez pas, conservez les messages et contactez-nous ou contactez directement la police ou la gendarmerie. C’est une extorsion, traitée comme telle."]
+    ],
+    "guides": ["photo-intime-sans-consentement", "deepfake-image-intime-retrait", "conserver-preuves-contenu-en-ligne"]
+  },
+  {
+    "slug": "fuites-documents",
+    "court": "Des documents internes qui ont fuité",
+    "titre": "Documents internes, courriers ou échanges privés publiés",
+    "resume": "Courriers, documents d’entreprise, échanges privés publiés sans autorisation : retrait auprès des hébergeurs, droit d’auteur, secret des affaires.",
+    "intro": [
+      "Un courrier interne apparaît sur un forum. Un échange de messages privés est publié en captures d’écran. Une présentation confidentielle circule sur un site de partage de documents. La question n’est pas seulement de retirer le document : c’est aussi de comprendre d’où il vient, sans aggraver la situation.",
+      "Ces dossiers mêlent souvent plusieurs enjeux : votre réputation personnelle, celle de l’entreprise, parfois une procédure interne ou un contentieux en cours. Nous les traitons avec l’avocat de l’entreprise lorsqu’il y en a un."
+    ],
+    "droit": [
+      "Une information qui a une valeur commerciale du fait de son caractère secret, et que l’entreprise protège par des mesures raisonnables, relève du secret des affaires (articles L151-1 et suivants du Code de commerce). Son obtention ou sa divulgation illicite ouvre droit à des mesures de retrait et à réparation.",
+      "Les documents rédigés par vous ou par l’entreprise sont souvent protégés par le droit d’auteur, ce qui permet de notifier leur retrait aux hébergeurs. Les correspondances privées sont par ailleurs protégées au titre de la vie privée et du secret des correspondances.",
+      "Lorsqu’un journaliste publie une information d’intérêt général, la protection des sources et la liberté de la presse s’appliquent : la stratégie est alors différente, et c’est l’avocat en droit de la presse qui la conduit."
+    ],
+    "delais": [
+      "Les notifications pour atteinte au droit d’auteur sont en général traitées en quelques jours par les hébergeurs.",
+      "En cas d’urgence, une procédure sur requête ou en référé permet d’obtenir une mesure rapide du juge.",
+      "Plus la diffusion est récente, plus il est facile de limiter les copies."
+    ],
+    "action": [
+      "Nous identifions les pages et les copies, ainsi que les hébergeurs et les plateformes concernés.",
+      "Nous choisissons le fondement le plus solide (droit d’auteur, secret des affaires, vie privée) pour chaque copie.",
+      "Nous coordonnons avec l’avocat de l’entreprise lorsqu’une procédure interne ou un contentieux est en cours.",
+      "Si nécessaire, l’avocat en droit des affaires demande des mesures urgentes au juge."
+    ],
+    "eviter": [
+      "Lancer une recherche interne publique de l’auteur de la fuite avant d’avoir sécurisé les preuves et les retraits.",
+      "Démentir publiquement un document authentique : le démenti devient lui-même l’information.",
+      "Traiter une publication de presse comme une simple fuite : les règles et les risques ne sont pas les mêmes."
+    ],
+    "faq": [
+      ["Le document a été publié par un ancien salarié. Cela change-t-il quelque chose ?", "Cela peut ouvrir des voies supplémentaires (obligations contractuelles, confidentialité), en plus du retrait des copies. L’avocat en droit social ou des affaires intervient alors."],
+      ["Peut-on savoir qui a publié le document ?", "Parfois, sur décision de justice, à partir des données conservées par l’hébergeur. C’est une démarche à mener avec précaution, en particulier en présence d’un lanceur d’alerte, qui bénéficie d’une protection légale."],
+      ["Le document circule sur une messagerie, pas sur un site. Est-ce traitable ?", "Les canaux publics de messageries peuvent faire l’objet de signalements. Les échanges privés sont plus difficiles à atteindre, mais la plainte reste possible."]
+    ],
+    "guides": ["demande-retrait-dmca", "conserver-preuves-contenu-en-ligne", "suivre-demande-retrait"]
+  }
+]

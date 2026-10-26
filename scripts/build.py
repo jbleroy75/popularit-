@@ -1,7 +1,7 @@
 """Génère tout le site statique dans dist/ : accueil, avis, périmètre, ressources et articles, sitemap, robots.
 
 Usage : python3 scripts/build.py
-Contenus éditoriaux : content/blog.json (articles), content/avis.json (avis clients réels, publiés avec accord).
+Contenus éditoriaux : content/blog.json (articles), content/expertises.json (pages par situation), content/avis.json (avis clients réels, publiés avec accord).
 """
 from pathlib import Path
 from html.parser import HTMLParser
@@ -13,6 +13,7 @@ ORIGIN = 'https://effacemoi.jbleroy.fr'
 UPDATED = '2026-10-26'
 articles = json.loads((ROOT / 'content/blog.json').read_text())
 avis = json.loads((ROOT / 'content/avis.json').read_text())
+expertises = json.loads((ROOT / 'content/expertises.json').read_text())
 
 
 def esc(s):
@@ -41,7 +42,7 @@ for a in articles:
 by_slug = {a['slug']: a for a in articles}
 
 # ---------------------------------------------------------------- gabarit commun
-NAV = [('/#situations', 'Situations traitées'), ('/#methode', 'Méthode'), ('/#avocats', 'Avocats'),
+NAV = [('/expertises/', 'Situations traitées'), ('/#methode', 'Méthode'), ('/#avocats', 'Avocats'),
        ('/avis/', 'Avis'), ('/blog/', 'Ressources')]
 
 
@@ -63,7 +64,7 @@ def head(title, description, path, schema=None, og_type='website'):
 FOOTER = '''</main>
 <footer class="foot"><div class="wrap foot-in">
 <div><a href="/" class="logo">EffaceMoi</a><p>Réputation et vie privée en ligne des dirigeants, des entrepreneurs et de leurs proches.</p></div>
-<ul><li><a href="/#situations">Situations traitées</a></li><li><a href="/#methode">Méthode</a></li><li><a href="/#avocats">Avocats</a></li><li><a href="/plateformes/">Périmètre</a></li></ul>
+<ul><li><a href="/expertises/">Situations traitées</a></li><li><a href="/#methode">Méthode</a></li><li><a href="/#avocats">Avocats</a></li><li><a href="/plateformes/">Périmètre</a></li></ul>
 <ul><li><a href="/avis/">Avis clients</a></li><li><a href="/blog/">Ressources</a></li><li><a href="/#questions">Questions</a></li><li><a href="/#contact">Contact</a></li></ul>
 <p class="foot-note">Aucun résultat n’est garanti : la décision appartient au site, au moteur de recherche ou au juge. EffaceMoi n’est affilié à aucune plateforme citée.</p>
 </div></footer></body></html>'''
@@ -84,19 +85,15 @@ def block(id_, label, body, cls=''):
 TOPICS = ['Article ou publication qui me met en cause', 'Résultat Google associé à mon nom', 'Informations personnelles publiées',
           'Faux profil ou usurpation', 'Photos ou vidéos diffusées sans accord', 'Surveillance de mon nom dans la durée', 'Autre']
 
-situations = [
-    ('Un article qui vous met en cause', 'Un papier ancien sur une affaire classée, un billet de blog inexact, un avis dénigrant sur votre entreprise. Selon le cas : actualisation, droit de réponse, retrait ou action en diffamation.'),
-    ('Un résultat Google associé à votre nom', 'Le lien existe toujours, mais il n’a plus lieu d’apparaître quand on vous cherche. Demande de déréférencement au titre du RGPD, et recours auprès de la CNIL si elle est refusée.'),
-    ('Votre adresse ou votre téléphone en ligne', 'Annuaires, sites de données, forums : votre domicile, celui de vos proches ou des informations sur votre patrimoine circulent. Demandes d’effacement et suivi des republications.'),
-    ('Un faux profil à votre nom', 'Un compte LinkedIn, Instagram ou X utilise votre nom ou votre photo, parfois pour contacter vos partenaires. Signalement, conservation des preuves, plainte si nécessaire.'),
-    ('Des images diffusées sans votre accord', 'Photos privées, vidéos, montages générés par IA. Ces dossiers sont traités en priorité et ne sont partagés qu’avec l’avocat qui en a besoin.'),
-    ('Des documents internes qui ont fuité', 'Courriers, échanges privés, documents de l’entreprise reproduits sans autorisation. Retrait auprès des hébergeurs, sur le fondement du droit d’auteur ou du secret des affaires.'),
-]
 faq = [
     ('Pouvez-vous garantir qu’un contenu disparaîtra ?', 'Non. La décision appartient au site, au moteur de recherche ou au juge. Ce que nous pouvons vous dire après le premier échange, c’est si la démarche a des chances raisonnables d’aboutir, et sur quel fondement.'),
     ('Combien cela coûte-t-il ?', 'Cela dépend du nombre de contenus, des sites concernés et de l’éventuelle nécessité d’aller devant un juge. Vous recevez une proposition écrite après le premier échange ; rien n’est engagé avant votre accord.'),
     ('Qui connaîtra mon dossier ?', 'Votre interlocuteur chez nous et, si une action juridique est nécessaire, l’avocat qui la mène. Nous ne citons jamais nos clients. Un accord de confidentialité peut être signé avant que vous nous exposiez les détails.'),
     ('Supprimer ou déréférencer, quelle différence ?', 'Supprimer, c’est faire retirer la page chez le site qui la publie. Déréférencer, c’est faire disparaître le lien des résultats d’un moteur de recherche quand on tape votre nom ; la page existe toujours. Les deux se mènent souvent en parallèle.'),
+    ('Faut-il d’abord porter plainte ?', 'Pas nécessairement. Beaucoup de contenus se retirent par une demande bien fondée, sans procédure. La plainte s’impose en cas d’usurpation, de menace, d’extorsion ou de diffusion d’images intimes ; nous vous le disons dès le premier échange.'),
+    ('Et si le site est hébergé à l’étranger ?', 'C’est fréquent. Le moteur de recherche, l’hébergeur technique ou le bureau d’enregistrement du nom de domaine restent souvent accessibles depuis l’Europe, et le déréférencement s’obtient indépendamment du pays du site. Pour les procédures locales, nous travaillons avec des avocats habitués à ces juridictions.'),
+    ('Pouvez-vous publier des contenus positifs pour « noyer » un résultat ?', 'Ce n’est pas notre métier premier. Nous privilégions le retrait et le déréférencement lorsqu’ils sont fondés : ils règlent le problème au lieu de le masquer. Quand aucune voie juridique n’existe, nous vous le disons et nous vous orientons.'),
+    ('Combien de temps dure un dossier ?', 'Les premières réponses arrivent souvent en quelques jours ou quelques semaines. Un dossier avec plusieurs sites, un recours CNIL ou une procédure judiciaire se compte en mois. Le calendrier figure dans la proposition.'),
     ('Vous occupez-vous aussi de l’entreprise ou de ma famille ?', 'Oui. Une mise en cause vise souvent le dirigeant et sa société en même temps, et les proches sont régulièrement exposés.'),
 ]
 
@@ -117,14 +114,20 @@ home += f'''
 </div>
 <p class="intro-cta"><a class="btn" href="#contact">Demander un premier échange</a><span>Confidentiel et sans engagement</span></p>
 </div></section>
-''' + block('situations', 'Les situations que nous traitons', '<dl class="cases">' + ''.join(f'<div><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>' for t, d in situations) + '</dl><p class="aside-link"><a href="/plateformes/">Sites et plateformes concernés →</a></p>') + block('methode', 'Notre façon de travailler', '''<ol class="method">
+''' + block('situations', 'Les situations que nous traitons', '<dl class="cases">' + ''.join(f'<div><dt><a href="/expertises/{e["slug"]}/">{esc(e["court"])}</a></dt><dd>{esc(e["resume"])}</dd></div>' for e in expertises) + '</dl><p class="aside-link"><a href="/plateformes/">Sites et plateformes concernés →</a></p>') + block('methode', 'Notre façon de travailler', '''<ol class="method">
 <li><b>Un premier échange.</b> Par téléphone ou en visio. Vous nous expliquez la situation ; nous vous disons franchement ce qui peut être fait, et ce qui ne le peut pas.</li>
 <li><b>Un état des lieux écrit.</b> Ce qui apparaît quand on cherche votre nom, ce qui est contestable, sur quel fondement et auprès de qui.</li>
 <li><b>Une proposition.</b> Le périmètre, le calendrier et le montant, par écrit, avant tout engagement de votre part.</li>
 <li><b>Les démarches, jusqu’au bout.</b> Demandes de retrait, déréférencement, relances, et compte rendu à chaque réponse obtenue.</li>
 </ol>''') + block('avocats', 'Quand il faut aller plus loin', '''<p class="lead-p">Une demande amiable ne suffit pas toujours. Nous travaillons avec des avocats dans chacun des domaines qu’un dossier de réputation peut toucher, et ils interviennent dès que la situation le demande : mise en demeure, plainte, référé, action contre un hébergeur à l’étranger.</p>
 <ul class="fields"><li>Droit de la presse et diffamation</li><li>Données personnelles et vie privée</li><li>Droit pénal et cybercriminalité</li><li>Propriété intellectuelle</li><li>Droit des affaires et concurrence</li><li>Procédures à l’étranger</li></ul>
-<p>Vous n’avez pas à chercher le bon avocat ni à répéter votre histoire : nous transmettons le dossier, nous coordonnons, et nous restons votre interlocuteur.</p>''', 'block-dark') + block('honoraires', 'Honoraires', '<p class="lead-p">Nous ne publions pas de tarifs : deux dossiers ne se ressemblent jamais. Après le premier échange, vous recevez une proposition écrite. Les honoraires d’avocat, lorsqu’une action juridique est engagée, font l’objet d’une convention distincte que vous signez directement avec lui.</p>') + block('confidentialite', 'Confidentialité', '<p class="lead-p">Nous ne citons pas nos clients, nous ne demandons que les informations utiles et nous pouvons signer un accord de confidentialité avant tout échange sur le fond. Les avis publiés sur ce site le sont avec l’accord de leur auteur, sans élément permettant de l’identifier.</p>') + block('questions', 'Questions fréquentes', '<div class="faq">' + ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq) + '</div>') + f'''
+<p>Vous n’avez pas à chercher le bon avocat ni à répéter votre histoire : nous transmettons le dossier, nous coordonnons, et nous restons votre interlocuteur.</p>''', 'block-dark') + block('avant', 'Avant d’agir', '''<p class="lead-p">Les premières heures comptent, et les réflexes naturels sont souvent les mauvais. Quatre conseils, quelle que soit la situation :</p>
+<ol class="method">
+<li><b>Ne répondez pas publiquement.</b> Un commentaire, un démenti ou une publication sur vos réseaux relancent le contenu et le font remonter dans les moteurs de recherche.</li>
+<li><b>Conservez les preuves.</b> Captures d’écran datées montrant l’adresse de la page, nom du compte, date de publication. Une fois le contenu retiré, il est trop tard pour les établir.</li>
+<li><b>Notez la date de publication.</b> En matière de diffamation, le délai pour agir est de trois mois. Il court même si vous découvrez le contenu tard.</li>
+<li><b>Ne contactez pas l’auteur seul.</b> Un échange maladroit peut être publié à son tour ; une demande d’argent ne s’arrête presque jamais au premier paiement.</li>
+</ol>''') + block('honoraires', 'Honoraires', '<p class="lead-p">Nous ne publions pas de tarifs : deux dossiers ne se ressemblent jamais. Après le premier échange, vous recevez une proposition écrite. Les honoraires d’avocat, lorsqu’une action juridique est engagée, font l’objet d’une convention distincte que vous signez directement avec lui.</p>') + block('confidentialite', 'Confidentialité', '<p class="lead-p">Nous ne citons pas nos clients, nous ne demandons que les informations utiles et nous pouvons signer un accord de confidentialité avant tout échange sur le fond. Les avis publiés sur ce site le sont avec l’accord de leur auteur, sans élément permettant de l’identifier.</p>') + block('questions', 'Questions fréquentes', '<div class="faq">' + ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq) + '</div>') + f'''
 <section class="contact" id="contact"><div class="wrap contact-in">
 <div class="contact-text"><h2>Nous contacter</h2>
 <p>Quelques lignes suffisent. Si vous préférez ne rien écrire de votre situation, indiquez seulement comment vous joindre : nous en parlerons de vive voix.</p>
@@ -194,6 +197,31 @@ perimetre += f'''
 ''' + block('', 'Sites et plateformes', '<dl class="cases">' + ''.join(f'<div><dt>{esc(t)}</dt><dd>{esc(d)}</dd></div>' for t, d in platforms) + '</dl><p class="small">EffaceMoi n’est affilié à aucune de ces plateformes et n’y dispose d’aucun accès privilégié. Chaque demande est examinée par son destinataire.</p><p><a class="btn" href="/#contact">Nous contacter</a></p>') + FOOTER
 write('/plateformes/', perimetre)
 
+# ---------------------------------------------------------------- pages par situation
+for i, e in enumerate(expertises):
+    path = '/expertises/' + e['slug'] + '/'
+    others = ''.join(f'<li><a href="/expertises/{o["slug"]}/">{esc(o["court"])}</a></li>' for o in expertises if o is not e)
+    guides = ''.join(f'<li><a href="/blog/{g}/">{esc(by_slug[g]["title"])}</a></li>' for g in e['guides'])
+    schema = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'Service', 'name': e['titre'], 'description': e['resume'], 'provider': {'@type': 'ProfessionalService', 'name': 'EffaceMoi', 'url': ORIGIN + '/'}, 'areaServed': 'FR'},
+        {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': r}} for q, r in e['faq']]}]}
+    page = head(e['titre'] + ' | EffaceMoi', e['resume'], path, schema) + f'''
+<section class="page-top"><div class="wrap"><p class="crumb"><a href="/">Accueil</a> / <a href="/expertises/">Situations traitées</a> / {esc(e['court'])}</p>
+<h1>{esc(e['titre'])}</h1>{''.join(f'<p class="lead-p">{esc(x)}</p>' for x in e['intro'])}</div></section>
+''' + block('', 'Ce que dit le droit', ''.join(f'<p>{esc(x)}</p>' for x in e['droit'])) \
+      + block('', 'Les délais à connaître', '<ul class="ticks">' + ''.join(f'<li>{esc(x)}</li>' for x in e['delais']) + '</ul>') \
+      + block('', 'Ce que nous faisons', '<ol class="method">' + ''.join(f'<li>{esc(x)}</li>' for x in e['action']) + '</ol>') \
+      + block('', 'Ce qu’il vaut mieux éviter', '<ul class="ticks ticks-no">' + ''.join(f'<li>{esc(x)}</li>' for x in e['eviter']) + '</ul>') \
+      + block('', 'Questions fréquentes', '<div class="faq">' + ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in e['faq']) + '</div>') \
+      + block('', 'Pour aller plus loin', f'<div class="two-lists"><div><p class="list-title">Guides pratiques</p><ul>{guides}</ul></div><div><p class="list-title">Autres situations</p><ul>{others}</ul></div></div>') + f'''
+<section class="contact"><div class="wrap cta-line"><div><h2>Parlons de votre situation</h2><p>Un premier échange confidentiel, sans engagement, pour savoir ce qui peut être fait.</p></div><a class="btn" href="/#contact">Nous contacter</a></div></section>''' + FOOTER
+    write(path, page)
+
+write('/expertises/', head('Situations traitées | EffaceMoi', 'Articles diffamatoires, résultats Google, données personnelles, faux profils, images diffusées sans accord, fuites de documents : les situations que traite EffaceMoi.', '/expertises/') + f'''
+<section class="page-top"><div class="wrap"><p class="crumb"><a href="/">Accueil</a> / Situations traitées</p>
+<h1>Les situations que nous traitons</h1><p class="lead-p">Chaque situation a ses fondements juridiques, ses délais et ses pièges. Choisissez celle qui vous concerne : vous y trouverez ce que dit le droit, ce que nous faisons et ce qu’il vaut mieux éviter.</p></div></section>
+<section class="block"><div class="wrap"><ul class="posts">{''.join(f'<li><a href="/expertises/{e["slug"]}/"><b>{esc(e["titre"])}</b><span>{esc(e["resume"])}</span></a></li>' for e in expertises)}</ul></div></section>''' + FOOTER)
+
 # ---------------------------------------------------------------- ressources
 related_map = {
     'supprimer-leak-onlyfans': ['demande-retrait-dmca', 'suivre-demande-retrait', 'supprimer-resultat-google'],
@@ -245,7 +273,7 @@ write('/blog/', head('Ressources : retrait, déréférencement, données personn
 <section class="block"><div class="wrap"><ul class="posts">{listing}</ul></div></section>''' + FOOTER)
 
 # ---------------------------------------------------------------- sitemap, robots
-urls = ['/', '/avis/', '/plateformes/', '/blog/'] + ['/blog/' + a['slug'] + '/' for a in articles]
+urls = ['/', '/expertises/'] + ['/expertises/' + e['slug'] + '/' for e in expertises] + ['/avis/', '/plateformes/', '/blog/'] + ['/blog/' + a['slug'] + '/' for a in articles]
 (DIST / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
                                   + ''.join(f'<url><loc>{ORIGIN}{u}</loc><lastmod>{UPDATED}</lastmod></url>' for u in urls) + '</urlset>')
 (DIST / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {ORIGIN}/sitemap.xml\n')

@@ -6,7 +6,8 @@ Site vitrine de présentation d’un service d’accompagnement pour les demande
 
 - `dist/` : pages statiques prêtes à publier
 - `content/blog.json` : contenus éditoriaux
-- `scripts/build-blog.py` : génération des pages de blog
+- `scripts/build.py` : génère tout le site (accueil, avis, périmètre, ressources, sitemap)
+- `content/avis.json` : avis clients publiés (réels, avec accord, anonymisés)
 
 Le service présenté sur le site n’implique aucun partenariat officiel avec les plateformes citées et ne garantit pas le retrait des contenus.
 
